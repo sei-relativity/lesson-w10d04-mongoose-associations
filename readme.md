@@ -282,6 +282,10 @@ cheesyQuiche.save(function (err, savedCheesyQuiche) {
 
 Note that we push the `cheddar` ingredient document into the `cheesyQuiche` ingredients array. We already told the Food Schema that we will only be storing ObjectIds, though, so `cheddar` gets converted to its unique `_id` when it's pushed in!
 
+Go into `mongo` and find the cheesy quiche:
+
+![](https://i.imgur.com/gzc9S2C.png)
+
 #### 3) Pull Data in With `.populate()`
 
 When we want to get full information from an `Ingredient` document we have inside the `Food` document `ingredients` array, we use a method called `.populate()`.
