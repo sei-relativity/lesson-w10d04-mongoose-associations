@@ -302,7 +302,7 @@ var mongoose = require("mongoose");
 var Food = require('./models/food');
 var Ingredient = require('./models/ingredient');
 
-const mongoURI = 'mongodb://localhost/mongoRelationships';
+const mongoURI = 'mongodb://localhost:27017/mongooseAssociationsInClass';
 mongoose.connect(mongoURI, { useNewUrlParser: true }, () => {
   console.log('the connection with mongod is established')
 });
