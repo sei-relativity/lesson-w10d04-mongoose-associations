@@ -7,7 +7,8 @@ Location: SF
 
 # Data Associations with Mongoose
 
-### Why is this important?
+## Why is this important
+
 <!-- framing the "why" in big-picture/real world examples -->
 *This workshop is important because:*
 
@@ -17,7 +18,7 @@ Location: SF
 
 - Understanding how to plan for, set up, and use related data will help us build more full-featured applications.
 
-### What are the objectives?
+## What are the objectives
 <!-- specific/measurable goal for students to achieve -->
 *After this workshop, developers will be able to:*
 
@@ -27,7 +28,8 @@ Location: SF
 - Design nested server routes for associated resources.
 - Build effective Mongoose queries for associated resources.
 
-### Where should we be now?
+## Where should we be now
+
 <!-- call out the skills that are prerequisites -->
 *Before this workshop, developers should already be able to:*
 
@@ -35,7 +37,7 @@ Location: SF
 * Create, Read, Update, and Delete data with Mongoose.
 
 
-### Numerical Categories for Relationships
+## Numerical Categories for Relationships
 
 ### One-to-One
 
@@ -398,14 +400,14 @@ app.get('/api/foods/', (req, res) => {
 On which of the following routes are you most likely to `populate` all the ingredients of a food you look up?
 
 
-|| | |
-|---|---|---|
-| **HTTP Verb** | **Path** | **Description** |
-| GET | /foods | Get all foods |
-| POST | /foods | Create a food |
-| GET | /foods/:id | Get a food |
-| DELETE | /foods/:id | Delete a food |
-| GET | /foods/:food_id/ingredients | Get all ingredients from a food |
+|               |                             |                                 |
+| ------------- | --------------------------- | ------------------------------- |
+| **HTTP Verb** | **Path**                    | **Description**                 |
+| GET           | /foods                      | Get all foods                   |
+| POST          | /foods                      | Create a food                   |
+| GET           | /foods/:id                  | Get a food                      |
+| DELETE        | /foods/:id                  | Delete a food                   |
+| GET           | /foods/:food_id/ingredients | Get all ingredients from a food |
 
 
 <br>
@@ -553,17 +555,17 @@ app.put('/api/users/:userId/tweets/:id', (req, res) => {
 Remember RESTful routing? It's the most popular modern convention for designing resource paths for nested data. Here is an example of an application that has routes for `Store` and `Item` models:
 
 ### RESTful Routing
-| | | | |
-|---|---|---|---|
-| **HTTP Verb** | **Path** | **Description** | **Key Mongoose Method(s)** |
-| GET | /stores | Get all stores | <details><summary>click for ideas</summary>`.find`</details> |
-| POST | /stores | Create a store | <details><summary>click for ideas</summary>`new`, `.save`</details> |
-| GET | /stores/:id | Get a store | <details><summary>click for ideas</summary>`.findById`</details> |
-| DELETE | /stores/:id | Delete a store | <details><summary>click for ideas</summary>`.findOneAndDelete`</details> |
-| GET | /stores/:store_id/items | Get all items from a store | <details><summary>click for ideas</summary>`.findById`, (`.populate` if referenced)</details> |
-| POST | /stores/:store_id/items | Create an item for a store | <details><summary>click for ideas</summary>`.findById`, `new`, `.save`</details> |
-| GET | /stores/:store_id/items/:item_id | Get an item from a store | <details><summary>click for ideas</summary>`.findOne`</details> |
-| DELETE | /stores/:store_id/items/:item_id | Delete an item from a store | <details><summary>click for ideas</summary>`.findOne`, `.remove`</details> |
+|               |                                  |                             |                                                                                               |
+| ------------- | -------------------------------- | --------------------------- | --------------------------------------------------------------------------------------------- |
+| **HTTP Verb** | **Path**                         | **Description**             | **Key Mongoose Method(s)**                                                                    |
+| GET           | /stores                          | Get all stores              | <details><summary>click for ideas</summary>`.find`</details>                                  |
+| POST          | /stores                          | Create a store              | <details><summary>click for ideas</summary>`new`, `.save`</details>                           |
+| GET           | /stores/:id                      | Get a store                 | <details><summary>click for ideas</summary>`.findById`</details>                              |
+| DELETE        | /stores/:id                      | Delete a store              | <details><summary>click for ideas</summary>`.findOneAndDelete`</details>                      |
+| GET           | /stores/:store_id/items          | Get all items from a store  | <details><summary>click for ideas</summary>`.findById`, (`.populate` if referenced)</details> |
+| POST          | /stores/:store_id/items          | Create an item for a store  | <details><summary>click for ideas</summary>`.findById`, `new`, `.save`</details>              |
+| GET           | /stores/:store_id/items/:item_id | Get an item from a store    | <details><summary>click for ideas</summary>`.findOne`</details>                               |
+| DELETE        | /stores/:store_id/items/:item_id | Delete an item from a store | <details><summary>click for ideas</summary>`.findOne`, `.remove`</details>                    |
 
 *In routes, avoid nesting resources more than one level deep.*
 
