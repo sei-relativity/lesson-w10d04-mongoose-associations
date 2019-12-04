@@ -1,12 +1,16 @@
-const mongoose = require("mongoose");
+var mongoose = require("mongoose");
+var Schema = mongoose.Schema;
+var Food = require("./models/food");
+var Ingredient = require("./models/ingredient");
 
-const Food = require("./models/food");
-const Ingredient = require("./models/ingredient");
-
-const mongoURI = "mongodb://localhost:27017/mongooseAssociationsInClass";
-mongoose.connect(mongoURI, { useNewUrlParser: true }, () => {
-  console.log("the connection with mongod is established");
-});
+const mongoURI = "mongodb://localhost:27017/mongoRelationships";
+mongoose.connect(
+  mongoURI,
+  { useNewUrlParser: true, useUnifiedTopology: true },
+  () => {
+    console.log("the connection with mongod is established");
+  }
+);
 
 Food.findOne({ name: "Quiche" })
   .populate("ingredients") // <- pull in ingredient data

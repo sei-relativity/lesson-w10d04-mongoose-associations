@@ -1,8 +1,8 @@
-const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
+var mongoose = require("mongoose");
+var Schema = mongoose.Schema;
 
-const Food = require("./models/food");
-const Ingredient = require("./models/ingredient");
+var Food = require("./models/food");
+var Ingredient = require("./models/ingredient");
 
 const mongoURI = "mongodb://localhost/mongoRelationships";
 mongoose.connect(mongoURI, { useNewUrlParser: true }, () => {
@@ -10,12 +10,12 @@ mongoose.connect(mongoURI, { useNewUrlParser: true }, () => {
 });
 
 // CREATE TWO INGREDIENTS
-const cheddar = new Ingredient({
+var cheddar = new Ingredient({
   name: "cheddar cheese",
   origin: "Wisconson"
 });
 
-const dough = new Ingredient({
+var dough = new Ingredient({
   name: "dough",
   origin: "Iowa"
 });
@@ -39,7 +39,7 @@ dough.save((err, savedCheese) => {
 });
 
 // CREATE A NEW FOOD
-const cheesyQuiche = new Food({
+var cheesyQuiche = new Food({
   name: "Quiche",
   ingredients: []
 });
