@@ -3,9 +3,10 @@ Creator:
 Location: SF
 -->
 
+# Data Associations with Mongoose
+
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
-# Data Associations with Mongoose
 
 ## Why is this important
 
@@ -124,9 +125,9 @@ How would you design the following? Draw an ERD for each set of related data? Ca
 ##### Initialize a directory
 
 1. `mkdir mongoose-associations-app` and `cd` into it
-1. `npm init -y`
-1. `npm i express mongoose`
-1. `touch server.js`
+2. `npm init -y`
+3. `npm i express mongoose`
+4. `touch server.js`
 
 <br>
 

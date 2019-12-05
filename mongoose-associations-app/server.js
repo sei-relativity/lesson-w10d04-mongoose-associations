@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 
 const Food = require("./models/food");
 const Ingredient = require("./models/ingredient");
+
 var User = require("./models/user").User;
 var Tweet = require("./models/user").Tweet;
 
